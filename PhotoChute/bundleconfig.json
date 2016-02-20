@@ -1,0 +1,26 @@
+[
+  {
+    "outputFileName": "app/photoListController.js",
+    "inputFiles": [
+      "app/photoListController.js"
+    ]
+  },
+  {
+    "outputFileName": "app/app.js",
+    "inputFiles": [
+      "app/app.js"
+    ]
+  },
+  {
+    "outputFileName": "app/photoService.js",
+    "inputFiles": [
+      "app/photoService.js"
+    ]
+  },
+  {
+    "outputFileName": "content/site.css",
+    "inputFiles": [
+      "content/site.css"
+    ]
+  }
+]

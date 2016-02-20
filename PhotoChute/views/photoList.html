@@ -1,0 +1,33 @@
+﻿<h2>    
+    Instagram Photos
+</h2>
+
+<div class="well form-inline row">
+    <div class="form-group col-md-3">
+        <label for="fullName">Name</label>
+        <input id="fullName" type="text" class="form-control input-sm" ng-model="vm.search.user.full_name"/>
+    </div>
+
+    <div class="form-group col-md-3">
+        <label for="caption">Caption</label>
+        <input id="caption" type="text" class="form-control input-sm" ng-model="vm.search.caption.text"/>
+    </div>
+
+    <div class="col-md-2">
+        <input type="button" ng-click="vm.loadFromService()" class="btn btn-sm btn-primary" value="Refresh"/>
+    </div>
+
+    <div class="pull-right">
+        <label ng-show="vm.actualCount > 0">Loaded {{vm.actualCount}} photos</label>
+        <i class="fa fa-refresh fa-spin fa-border" ng-show="vm.isBusy"></i>
+        <i class="fa fa-lg fa-border" ng-class="vm.hasLoadedRemotely ? 'fa-cloud-download' : 'fa-file' "></i>
+    </div>
+</div>
+<div class="alert alert-danger" ng-show="vm.errorMessage">{{ vm.errorMessage }}</div>
+
+<div id="photoList">
+    <div ng-repeat="photo in vm.photos | filter:vm.search" class="pull-left img-display">
+        <img ng-src="{{photo.images.low_resolution.url}}"/>
+        <div><strong>{{vm.getAuthorName(photo)}}</strong></div>
+    </div>
+</div>

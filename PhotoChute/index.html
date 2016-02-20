@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="content/bootswatch/flatly/bootstrap.min.css" rel="stylesheet"/>
+    <link href="content/fontawesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="content/site.min.css" rel="stylesheet"/>
+</head>
+<body ng-app="photoApp">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand">Photo Chute</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/photolist">View Photos</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        <div ng-view></div>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="app/photoService.min.js"></script>
+    <script src="app/app.min.js"></script>
+    <script src="app/photoListController.min.js"></script>
+    <script src="scripts/jquery-2.2.0.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+</body>
+</html>
