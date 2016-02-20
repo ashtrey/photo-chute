@@ -1,5 +1,5 @@
 ﻿(function() {
-    "user strict";
+    "use strict";
 
     angular.module("photoApp")
         .controller("photoListController", ["instagramService", function photoListController(photoService) {

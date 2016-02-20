@@ -1,5 +1,5 @@
 ﻿(function () {
-    "user strict";
+    "use strict";
 
     angular.module("photoServices", [])
         .factory("instagramService", ["$http", function ($http) {
